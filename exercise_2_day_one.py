@@ -33,9 +33,9 @@ print(("Hello world\n" * 4) + ("I love python\n" * 4))
 number = int(input('Please choose a number between 1 and 12.'))
 if 3 <= number <= 5:
     print('This is Spring.')
-if 6 <= number <= 8:
+elif 6 <= number <= 8:
     print('This is Summer.')
-if 9 <= number <= 11:
+elif 9 <= number <= 11:
     print('This is Autumn.')
-if number == 12 or 1 <= number <= 2:
+elif number == 12 or 1 <= number <= 2:
     print('This is Winter.')
