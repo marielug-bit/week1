@@ -125,4 +125,4 @@ user_height = int(input('What is you height in cm?'))
 if user_height > 145:
     print('you are tall enough to ride.')
 else :
-    print('you need to grow some more to ride.23')
+    print('you need to grow some more to ride.')
