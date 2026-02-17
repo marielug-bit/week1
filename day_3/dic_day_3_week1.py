@@ -22,7 +22,15 @@ sample_dict = {
 
 }
 keys_to_remove = ["name", "salary"]
-#del sample_dict['name']
-#del sample_dict['salary']
-del sample_dict['name','salary']
+del sample_dict['name']
+del sample_dict['salary']
+#del sample_dict['name','salary'] ne marche pas 
+# sample_dict = {k: v for k, v in sample_dict.items() if k not in keys_to_remove}
 print(sample_dict)
+
+lst = [1,2,3]
+def multiply(x):
+    return x*2
+
+print(list(map(multiply,lst)))
+print(lst)
