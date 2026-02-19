@@ -14,7 +14,7 @@
 # - A list of lists (a 2D list) is a good choice.
 # - Initially, each cell should be empty (example: a space ' ').
 #
-# Example board structure:
+# Example board structure: 
 board = [
    [' ', ' ', ' '],
    [' ', ' ', ' '],
@@ -105,10 +105,10 @@ def board_col(board):
 
 def check_win(board, player):
     for raw in board:
-        if ''.join(raw) == 'player'*3:
+        if ''.join(raw) == player*3:
             return True
     for col in board_col(board):
-        if ''.join(col)== 'player'*3:
+        if ''.join(col)== player*3:
             return True
     if board[0][0] == board [1][1] == board[2][2] == player:
         return True
@@ -131,10 +131,8 @@ def check_win(board, player):
 def check_tie(board):
     for raw in board:
         for char in raw:
-            if char != ' ':
+            if char == ' ':
                 return False
-    if check_win(board, player1) or check_win(board, player12):
-        return False
     return True
 
 def change_player(current_player):
