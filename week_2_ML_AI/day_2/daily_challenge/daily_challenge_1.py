@@ -160,7 +160,8 @@ class Pagination:
 # - Each item should appear on a new line.
 # - Use "\n".join(...)
 #
-#
+    def __str__(self):
+        return("\n".join(self.get_visible_items()))
 # --------------------------------------------------
 # Testing
 # --------------------------------------------------
