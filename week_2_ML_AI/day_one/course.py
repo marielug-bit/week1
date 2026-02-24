@@ -103,11 +103,12 @@ class Zoo:
 
     def sort_animals(self):
         dic = {}
-        for animal in self.animals:
+        for animal in sorted(self.animals):
             if animal[0] in dic.keys():
                 dic[animal[0]].append(animal)
-            dic[animal[0]] = [animal]
-            return dic
+            else:
+                dic[animal[0]] = [animal]
+        return dic
 
 
     def get_groups(self):

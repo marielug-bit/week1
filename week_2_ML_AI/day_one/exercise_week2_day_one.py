@@ -57,7 +57,7 @@ class Song:
     def sing_me_a_song(self):
         for line in self.lyrics:
             print(line)
-       
+        
 
 # Create a song and call sing_me_a_song()
 new_song = Song(['Il etait un petit navire','qui n avait ja-ja-jamais navigue','Oheohe'])
