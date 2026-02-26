@@ -16,3 +16,4 @@ with open("student.json", "r") as f:
 print(f"Loaded: {loaded}")
 print(f"Name: {loaded['name']}")
 print(f"Average grade: {sum(loaded['grades']) / len(loaded['grades'])}")
+

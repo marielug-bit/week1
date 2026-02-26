@@ -1,3 +1,4 @@
+#Exercise1
 import random
 
 def get_words_from_file(file_path):
@@ -30,3 +31,31 @@ def main():
         print('value error, this should be a number between 2 and 20')
 
 main()
+
+
+#Exercise2
+import json
+sampleJson =  """{
+   "company":{
+      "employee":{
+         "name":"emma",
+         "payable":{
+            "salary":7000,
+            "bonus":800
+         }
+      }
+   }
+}""" 
+
+data = json.loads(sampleJson)
+
+print(data['company']['employee']['payable']['salary'])
+data['company']['employee']["birth_date"] = "1990-05-15"
+
+with open('employee.json','w') as f:
+    json.dump(data,f,indent=2)
+
+with open('employee.json','r') as f:
+    content = f.read()
+
+print(content)

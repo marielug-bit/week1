@@ -20,3 +20,4 @@ print(f"Ugly:   {ugly}")
 
 pretty = json.dumps(person, indent=2)
 print(f"Pretty:\n{pretty}")
+

@@ -19,8 +19,7 @@ class Circle:
         return new_circle
     
     def __gt__(self,other:Circle):
-        max_rad = max(self.radius,other.radius)
-        return Circle(max_rad)
+        return self.radius > other.radius
     
     def __eq__(self,other:Circle):
         return self.radius == other.radius
