@@ -47,11 +47,13 @@ print(df2.head())
 # Handwritten notes from a brainstorming session. OCR, group according to the category, priority
 #tutorial : speech to text, structure according to ingredients, steps..
 
+#exercise 8
 import pandas as pd
 url = 'https://raw.githubusercontent.com/marielug-bit/week1/main/week_3_ML_AI/day_1/train.csv'
 df = pd.read_csv(url)
 print(df.head())
 
+#exercise 9
 data = {
     'Name' : ['Marie','David','Yehuda'],
     'Age': [27,28,1]
@@ -61,3 +63,9 @@ print(df)
 
 df.to_excel("data.xlsx", index=False)
 df.to_json("data.json")
+
+#exercise 10
+
+url2 = 'https://raw.githubusercontent.com/marielug-bit/week1/main/week_3_ML_AI/day_1/posts.json'
+df4 = pd.read_json(url2)
+print(df4.head())
