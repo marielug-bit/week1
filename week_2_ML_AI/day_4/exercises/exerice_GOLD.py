@@ -1,4 +1,5 @@
 import requests
+from pprint import pprint
 
 API_KEY = "3mD1rwNxJ3vPgcfxbTouSJwz5lqJmWXS"
 url = "https://api.giphy.com/v1/gifs/random"
@@ -16,4 +17,4 @@ data = response.json()
 gif_url = data["data"]["images"]["original"]["url"]
 
 print("Here is your GIF:")
-print(gif_url)
+pprint(gif_url)

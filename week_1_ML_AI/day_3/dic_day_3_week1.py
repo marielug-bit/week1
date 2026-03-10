@@ -34,3 +34,5 @@ def multiply(x):
 
 print(list(map(multiply,lst)))
 print(lst)
+
+from functools import reduce

@@ -91,6 +91,10 @@ print(dic)
 #    - Remove commas ","
 #    - Convert the cleaned string to an integer
 #    - Do NOT hard-code the cleaning.
+def cleaning_data_purshase(dic):
+    new_dic = {key:int(value.replace('$','').replace(',','')) 
+               for key, value in dic.items()}
+    return new_dic
 #
 # 3. Determining Affordable Items:
 #    - Create a list called basket.
@@ -105,6 +109,19 @@ print(dic)
 #
 #    - Otherwise:
 #        Print the basket list in alphabetical order.
+def what_is_affordable(dic,wallet):
+    basket = []
+    wallet = int(wallet.replace('$','').replace(',',''))
+    for key,value in dic.items():
+        if value <= wallet:
+            basket.append(key)
+            wallet -= value
+    if basket:
+        sorted_basket = sorted(basket)
+        print(sorted_basket) 
+    else:
+        print('Nothing')
+
 #
 # 4. Examples:
 #

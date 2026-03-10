@@ -205,6 +205,7 @@ def make_great_one_name(name):
 
 def make_great(magician_names):
     new_list = list(map(make_great_one_name, magician_names))
+    # magician_names = new_list if we want to modify it
     print('\n'.join(new_list))
 
     
@@ -278,9 +279,9 @@ def main():
 #
 # Step 5 (Bonus): Ask user for month (1-12) and determine season
 #   - Modify get_random_temp() to return temperatures based on season
-month = input('Write a month (1-12): ')
+month = int(input('Write a month (1-12): '))
 def get_random_temp():
-    if month 1<= month <= 2 or month = 12 :
+    if 1<= month <= 2 or month == 12 :
         return random.uniform(-10,0)
     if 3 <= month <= 5:
         return random.uniform(0,16)
