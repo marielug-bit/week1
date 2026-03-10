@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "name": "Vegetable soup",
+      "price": 30
+    },
+    {
+      "name": "Milkshake",
+      "price": 22.5
+    },
+    {
+      "name": "Beef stew",
+      "price": 52.5
+    }
+  ]
+}
+
