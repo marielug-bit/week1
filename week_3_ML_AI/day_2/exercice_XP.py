@@ -32,7 +32,7 @@ df = df.dropna()
 
 #Exercise 3
 df['Title'] = df['Name'].str.extract(r' ([A-Za-z]+)\.', expand=False)
-df['Family Size'] = df['Parch']+df['SibSp']
+df['Family Size'] = df['Parch'] + df['SibSp'] + 1
 #df['Sex']=df['Sex'].map({'male':0, 'female':1})
 #print(df['Embarked'].value_counts())
 df = pd.get_dummies(df, columns=['Title','Embarked','Sex'])
@@ -71,14 +71,14 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.preprocessing import StandardScaler
 
 scaler = MinMaxScaler()
-df['Age_normalized'] = scaler.fit_transform(df[['Age']])
 df['Fare_normalized'] = scaler.fit_transform(df[['Fare']])
-
 
 #print(df['Age'].skew())
 
 scaler = StandardScaler()
-df[['Family Size']] = scaler.fit_transform(df[['Family Size']])+1
+df[['Family Size']] = scaler.fit_transform(df[['Family Size']])
+df['Age_normalized'] = scaler.fit_transform(df[['Age']])
+
 
 #exercise 6
 print(df.columns)
@@ -86,3 +86,4 @@ print(df.columns)
 df['Age_group']=pd.cut(df['Age'],bins=[0, 12, 18, 60, 100],labels=['child', 'teen', 'adult', 'senior'])
 df = pd.get_dummies(df, columns=['Age_group'])
 
+print(df.select_dtypes(include=['int64','float64']))
